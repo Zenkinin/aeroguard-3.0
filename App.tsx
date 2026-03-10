@@ -37,6 +37,7 @@ const App: React.FC = () => {
     setSimState(SimulationState.IMPACT);
     // Delay the data panel reveal to simulate computation / suspense
     setTimeout(() => {
+      setIsRightOpen(true);       // Always re-open right panel on new impact result
       setIsDataPanelVisible(true);
     }, 1500);
   }, []);
